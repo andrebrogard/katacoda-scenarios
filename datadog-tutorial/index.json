@@ -39,6 +39,10 @@
       "text": "finish.md"
     }
   },
+  "files": [
+    "/usr/local/bin/index.js",
+    "/usr/local/bin/Dockerfile"
+  ],
   "environment": {
     "uilayout": "editor-terminal"
   },
