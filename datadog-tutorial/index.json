@@ -4,12 +4,6 @@
   "difficulty": "Intermediate",
   "time": "10",
   "details": {
-    "assets": {
-      "host01": [
-          {"file": "index.js", "target": "/server/", "chmod": "+x"},
-          {"file": "Dockerfile", "target": "/server/", "chmod": "+x"}
-      ]
-    },
     "steps": [
       {
         "title": "Step 1",
@@ -39,9 +33,6 @@
       "text": "finish.md"
     }
   },
-  "files": [
-    "server/index.js"
-  ],
   "environment": {
     "uilayout": "editor-terminal"
   },
