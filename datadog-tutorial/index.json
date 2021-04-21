@@ -33,6 +33,9 @@
       "text": "finish.md"
     }
   },
+  "files": [
+    "server/"
+  ],
   "environment": {
     "uilayout": "editor-terminal"
   },
