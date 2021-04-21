@@ -5,9 +5,8 @@
   "time": "10",
   "details": {
     "assets": {
-      "host01": [
-        {"file": "index.js", "target": "/usr/local/bin/", "chmod": "+x"},
-        {"file": "Dockerfile", "target": "/usr/local/bin/", "chmod": "+x"}
+      "client": [
+        {"file": "**/*", "target": "/root/code/", "chmod": "+x"}
     ]
     },
     "steps": [
@@ -40,10 +39,11 @@
     }
   },
   "files": [
-    "/usr/local/bin/index.js",
-    "/usr/local/bin/Dockerfile"
+    "/root/index.js"
   ],
   "environment": {
+    "hideHiddenFiles": true,
+    "uieditorpath": "/root/code/",
     "uilayout": "editor-terminal"
   },
   "backend": {
