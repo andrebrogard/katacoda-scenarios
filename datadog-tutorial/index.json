@@ -6,8 +6,8 @@
   "details": {
     "assets": {
       "host01": [
-        {"file": "index.js", "target": "/server/", "chmod": "+x"},
-        {"file": "Dockerfile", "target": "/server/", "chmod": "+x"}
+        {"file": "index.js", "target": "/usr/local/bin/", "chmod": "+x"},
+        {"file": "Dockerfile", "target": "/usr/local/bin/", "chmod": "+x"}
     ]
     },
     "steps": [
