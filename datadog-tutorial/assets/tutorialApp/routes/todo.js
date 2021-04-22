@@ -17,6 +17,7 @@ function getHandler(req, res) {
                 res.status(400).end()
                 return
             }
+            console.log("GET all")
             res.json({items: docs})
         })
     } else {
@@ -41,7 +42,7 @@ function postHandler(req, res) {
                 res.status(400).end()
                 return
             }
-
+            console.log("POST", uid)
             res.json({id: uid, text})
         })
     } else {
@@ -60,6 +61,7 @@ function deleteHandler(req, res){
                 res.status(400).end()
                 return
             }
+            console.log("DELETE", id)
             res.status(204).end()
         })
     } else {
