@@ -16,8 +16,30 @@ copy your API key by clicking on Windows -> find your API key as shown in the im
 
 ## Configure 
 
+Now we will add a DataDog agent to our docker compose network. The DataDog agent will forward our logs from our application to the DataDog website.
 
-`docker-compose build`{{execute}}
+We start by editing our `docker-compose.yaml` file. We will add the DataDog agent. Please insert your **API key**.
 
-`docker build -t brogard/simple_datadog_tutorial_user_bot .`
-`docker push brogard/simple_datadog_tutorial_user_bot`
+<pre class="file" data-filename="docker-compose.yaml" data-target="insert" data-marker="#TODO-add-DD-service">
+datadog-agent:
+    image: gcr.io/datadoghq/agent:7
+    container_name: datadog-agent
+    environment:
+      - DD_API_KEY=your-api-key
+      - DD_SITE=datadoghq.eu
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /proc/:/host/proc/:ro
+      - /sys/fs/cgroup:/host/sys/fs/cgroup:ro
+</pre>
+
+Note: If you created your account in the US region. Please change 'datadoghq.eu' to 'datadoghq.com'
+
+Next we will prepare our application environment to also include the following environvariables. This is so that it can find the DataDog agent in the network.
+
+<pre class="file" data-filename="docker-compose.yaml" data-target="insert" data-marker="#TODO-add-DD-env">
+DD_AGENT_HOST: datadog-agent 
+DD_TRACE_AGENT_PORT: 8126 
+DD_PROFILING_ENABLED: "true" 
+DD_LOGS_INJECTION: "true" 
+</pre>

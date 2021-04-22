@@ -39,7 +39,7 @@
     }
   },
   "files": [
-    "/root/index.js"
+    "docker-compose.yaml"
   ],
   "environment": {
     "hideHiddenFiles": true,

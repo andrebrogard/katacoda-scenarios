@@ -19,8 +19,12 @@ We can observe the logs of the application by running:
 
 `docker-compose logs --tail 5 -f app`{{execute}}
 
-
 You can also interact with the application and see what happens in the logs. 
+
+To stop the logs:
+
+`Interrupt`{{execute interrupt}}
+
 
 ### But this kind of logging is awkward!
 Here, we saw logs from print statements in the application which are called at the same time as the function.
@@ -38,7 +42,7 @@ Stop and remove the bot.
 
 `docker stop todo_bot && docker rm todo_bot`{{execute}}
 
-Take the application down.
+Take the application and database down.
 
 `docker-compose down`{{execute}}
 
