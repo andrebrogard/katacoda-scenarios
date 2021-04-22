@@ -17,4 +17,4 @@ It helps supervise servers and databases, which will be shown in this tutorial.
 
 **Step 6:** Conclusion
 
-![](./assets/logo.png)
+<img src="https://github.com/andrebrogard/katacoda-scenarios/blob/main/datadog-tutorial/logo.png" alt="Logo" width="350px" />
