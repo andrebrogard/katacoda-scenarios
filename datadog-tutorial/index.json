@@ -13,8 +13,7 @@
     "steps": [
       {
         "title": "Step 1",
-        "text": "step1.md",
-        "background": "cd.sh"        
+        "text": "step1.md"      
       },
       {
         "title": "Step 2",
