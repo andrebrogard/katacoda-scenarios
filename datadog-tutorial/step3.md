@@ -20,7 +20,7 @@ Now we will add a DataDog agent to our docker compose network. The DataDog agent
 
 We start by editing our `docker-compose.yaml` file. Open the `docker-compose.yaml`{{open}} file. 
 
-We will add the DataDog agent. Please insert your **API key** here.
+We will add the DataDog agent container to our compose file. Please also insert your **API key** here in the editor to the right after you have copid the belowed snippet.
 
 <pre class="file" data-filename="docker-compose.yaml" data-target="insert" data-marker="#TODO-add-DD-service">
 datadog-agent:
@@ -40,7 +40,7 @@ Note: If you created your account in the US region. Please change 'datadoghq.eu'
 Next we will prepare our application environment to also include the following environvariables. This is so that it can find the DataDog agent in the network.
 
 <pre class="file" data-filename="docker-compose.yaml" data-target="insert" data-marker="#TODO-add-DD-env">
-DD_AGENT_HOST: datadog-agent 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DD_AGENT_HOST: datadog-agent 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DD_TRACE_AGENT_PORT: 8126 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DD_PROFILING_ENABLED: "true" 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DD_LOGS_INJECTION: "true" 
