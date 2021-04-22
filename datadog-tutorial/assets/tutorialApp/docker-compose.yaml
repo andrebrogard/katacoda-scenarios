@@ -1,0 +1,27 @@
+# Use root/example as user/password credentials
+version: '3.9'
+
+services:
+
+  mongo:
+    image: mongo
+    restart: always
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  app:
+    build: .
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - "mongo"
+    environment:
+        MONGO_HOSTNAME: mongo
+        ME_CONFIG_MONGODB_ADMINUSERNAME: root
+        ME_CONFIG_MONGODB_ADMINPASSWORD: example
+
