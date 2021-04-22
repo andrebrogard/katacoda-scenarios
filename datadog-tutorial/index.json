@@ -43,7 +43,7 @@
   ],
   "environment": {
     "hideHiddenFiles": true,
-    "uieditorpath": "/root/code/",
+    "uieditorpath": "/root/code/tutorialApp/",
     "uilayout": "editor-terminal"
   },
   "backend": {
