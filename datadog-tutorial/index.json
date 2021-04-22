@@ -6,14 +6,14 @@
   "details": {
     "assets": {
       "client": [
-        {"file": "**/*", "target": "/root/code/", "chmod": "+x"},
-        {"file": "cd.sh", "target": "/root/", "chmod": "+x"}
-    ]
+        {"file": "**/*", "target": "/root/code/", "chmod": "+x"}
+      ]
     },
     "steps": [
       {
         "title": "Step 1",
-        "text": "step1.md"      
+        "text": "step1.md",
+        "background": "cd.sh"      
       },
       {
         "title": "Step 2",
