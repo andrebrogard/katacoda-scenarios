@@ -6,7 +6,8 @@
   "details": {
     "assets": {
       "client": [
-        {"file": "**/*", "target": "/root/code/", "chmod": "+x"}
+        {"file": "**/*", "target": "/root/code/", "chmod": "+x"},
+        {"file": "cd.sh", "target": "/root/", "chmod": "+x"}
     ]
     },
     "steps": [
