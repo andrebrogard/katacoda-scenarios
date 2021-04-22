@@ -1,6 +1,6 @@
-# Welcome to the DataDog tutorial! 
+# Welcome to this tutorial! 
 
-The point of this tutorial is to teach you how to use DataDog, which is a monitoring service for applications. 
+The goal of the tutorial is to teach you how to use DataDog, which is a monitoring service for applications. 
 It helps supervise servers and databases, which will be shown in this tutorial.  
 
 ## Structure of the tutorial: 
@@ -17,4 +17,4 @@ It helps supervise servers and databases, which will be shown in this tutorial.
 
 **Step 6:** Conclusion
 
-![](logo.png)
+![](./assets/logo.png)
