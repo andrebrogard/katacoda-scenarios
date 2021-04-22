@@ -38,8 +38,12 @@ Note: If you created your account in the US region. Please change 'datadoghq.eu'
 Next we will prepare our application environment to also include the following environvariables. This is so that it can find the DataDog agent in the network.
 
 <pre class="file" data-filename="docker-compose.yaml" data-target="insert" data-marker="#TODO-add-DD-env">
-DD_AGENT_HOST: datadog-agent 
-DD_TRACE_AGENT_PORT: 8126 
-DD_PROFILING_ENABLED: "true" 
-DD_LOGS_INJECTION: "true" 
+        DD_AGENT_HOST: datadog-agent 
+        DD_TRACE_AGENT_PORT: 8126 
+        DD_PROFILING_ENABLED: "true" 
+        DD_LOGS_INJECTION: "true" 
 </pre>
+
+The next time we build and run our compose file, our DataDog agent will also run and will be accessible to the application. 
+
+Before we run this, we will integrate our 
