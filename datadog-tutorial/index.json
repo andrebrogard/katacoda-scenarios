@@ -6,15 +6,13 @@
   "details": {
     "assets": {
       "client": [
-        {"file": "cd.sh", "target": "/root", "chmod": "+x"},
         {"file": "**/*", "target": "/root/code/", "chmod": "+x"}
     ]
     },
     "steps": [
       {
         "title": "Step 1",
-        "text": "step1.md",
-        "background": "cd.sh"
+        "text": "step1.md"
       },
       {
         "title": "Step 2",
@@ -40,9 +38,6 @@
       "text": "finish.md"
     }
   },
-  "files": [
-    "docker-compose.yaml"
-  ],
   "environment": {
     "hideHiddenFiles": true,
     "uieditorpath": "/root/code/tutorialApp/",
