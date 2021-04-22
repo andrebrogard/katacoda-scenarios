@@ -1,6 +1,10 @@
 
 In this step, you will run the application without DataDog.  
 
+First, make sure you are in the correct folder in the terminal.
+
+`cd /root/code/tutorialApp/`{{execute}}
+
 ## Deploy the app and observe the traffic
 
 Deploy the application. The compose file will start a nodejs app and a mongodb instance. 
@@ -11,9 +15,10 @@ To see the todo application UI running, follow this link. The underlying api sup
 
 https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com
 
-To simulate user activity, we have written a very simple bot that randomly interacts with the api. It will call the api every 300 ms. 
+To simulate user activity, we have written a very simple bot that randomly interacts with the api. 
+It will call the api every 500 ms.
 
-`docker run --network=host -d --name todo_bot brogard/simple_datadog_tutorial_user_bot`{{execute}}
+`docker run --network=host -d --env INTERVAL_MS=500 --name todo_bot brogard/simple_datadog_tutorial_user_bot`{{execute}}
 
 We can observe the logs of the application by running:
 

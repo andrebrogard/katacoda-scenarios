@@ -1,3 +1,4 @@
+// TODO: Insert trace
 const app = require('./app')
 const { connect: mongodbConnect, getDb } = require('./db')
 const port = "3000"
