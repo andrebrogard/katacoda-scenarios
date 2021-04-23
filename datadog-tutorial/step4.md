@@ -1,9 +1,15 @@
-Now you are ready to make changes to our application
-// eva: har inte vi redan make changes i application iom att man ändrade yaml file ? 
+Now you are ready to implement DataDog in the application
 
-## Application changes
+## Implement DataDog in the application 
 
-First of all, we need to make available the `dd-trace` npm package for our application. This DataDog's ready made javascript package. We could add the package directly to package.json, but it is easier to run
+### What is a tracer? 
+
+To implement DataDog in the application, you will add a tracer to the nodejs application. You will use DataDog's javascript tracer. It integrates easily with popular packages such as express and mongodb (the packages that the application uses).
+The tracer will generate rich logs from the express and mongodb package and send these to the DataDog Agent that we created and made available in the previous step. The DataDog Agent will forward thes logs to the DataDog site, it will become available to you through their platform.
+
+### Tracer Installation
+
+First of all, you need to make the `dd-trace` npm package available for the application. It is DataDog's ready-made javascript package. You could add the package by writing or copying it directly to package.json, but it is easier to run:
 
 `npm install dd-trace`{{execute}}
 
@@ -13,42 +19,9 @@ Open the `index.js`{{open}} file.
 
 You need to initialize the tracer. Add the followig code snippet at the top of the entryfile, because it can then automatically attach to and trace the express and mongodb package.
 
-// eva: förklara vad tracer är typ? 
-
 <pre class="file" data-filename="index.js" data-target="insert" data-marker="// TODO: Insert trace">
 const tracer = require('dd-trace').init()
 </pre>
 
-Now we have actually completed our integration. It is time for us to run the stack.
-
-## It is time to run!
-Start by rebuilding your compose file, because the application has been altered by adding the datadog agent since the last time it was built.
-
-`docker-compose build`{{execute}}
-
-Next, run the stack.
-
-`docker-compose up -d`{{execute}}
-
-## Let's add some users!
-
-An application is nothing without its users. Lets add a very energetic one. This one makes a call to the api every 100 ms. 
-
-`docker run --network=host -d --env INTERVAL_MS=100 --name todo_bot brogard/simple_datadog_tutorial_user_bot`{{execute}}
-
-Note: If you cannot start this one, it is because you forgot to delete it before. Run the stop and remove command below.
-
-// eva: ska man bara hänvisa dem till command i step 2 ? 
-
-## Let's Watch!
-
-Now for what you have waited for, what can we see in DataDog?
-
-Once logged in to the DataDog app (app.datadog.eu)
-1. Go to APM
-2. Go to Services
-3. Go to app
-
-Here you can see graphs of how your services perform and how they
-
-// eva : meningen stannade här 
+## Next
+Now the integration is complete and it is time to run the stack.

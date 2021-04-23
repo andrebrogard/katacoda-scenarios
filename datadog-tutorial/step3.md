@@ -15,7 +15,7 @@ copy your API key by clicking on Windows -> find your API key in the same place 
 
 ## Configure 
 
-Now you will add a DataDog agent to the docker compose network. The DataDog agent will forward the logs from the application to the DataDog website.
+Now, you will add a DataDog agent to the network defined by the docker-compose file. The DataDog agent will forward the logs from the application to the DataDog website.
 
 Start by editing the `docker-compose.yaml`{{open}} file. Open it, and add the DataDog agent container to the compose file:
 
@@ -34,14 +34,12 @@ datadog-agent:
 
 The file should now contain the code snippet above.
 
-Now, insert your **API key** in the file instead of "your-api-key".
+Now, insert your **API key** in the file instead of 'your-api-key'.
 
-**Note:** The information besides "DD_SITE" depends on which region you created your account in. If you created your account in the US region. Please change 'datadoghq.eu' to 'datadoghq.com'
+**Note:** The information besides 'DD_SITE' depends on which region you created your account in. If you created your account in the US region, change 'datadoghq.eu' to 'datadoghq.com'
 
 ## Application Environment
-Next you need your application environment to also include the following environment variables. This is so that it can find the DataDog agent in the network.
-
-We need to provide the application with the host name and port of the DataDog agent. Here we also enable profiling. 
+Next you need your application environment to include the following environment variables. This is so that it can find the DataDog agent in the network. You need to provide the application with the host name and port of the DataDog agent, and enable profiling. 
 
 <pre class="file" data-filename="docker-compose.yaml" data-target="insert" data-marker="#TODO-add-DD-environment">
 DD_AGENT_HOST: datadog-agent 
@@ -50,8 +48,7 @@ DD_AGENT_HOST: datadog-agent
         DD_LOGS_INJECTION: "true"
 </pre>
 
-
 ## Next
 In the next step, you will build and run your compose file, and your DataDog agent will also run and will be accessible to the application. 
 
-Before we run our stack, we will make our nodejs application send data to the agent.
+Before you run the stack, you will make sure that the nodejs application sends data to the agent.

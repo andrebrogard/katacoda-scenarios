@@ -9,7 +9,7 @@ First, go to the correct folder in the terminal by clicking below.
 The application is a nodejs express app, it exposes a to-do rest api at /api/todo and a minimal interface at '/' where you can interact with the application.
 The API supports GET, POST and DELETE of todos. In the background it uses a mongodb instance.
 
-We deploy both of these using docker and docker-compose. 
+We deploy both of these using docker and docker-compose. The application is built locally, which means the entire application code is in the editor to your right. Feel free to check it out. 
 
 While this tutorial does not require knowledge of nodejs/express, mongodb or docker it is beneficial if the reader is familiar with the technologies to understand several steps. 
 
@@ -39,7 +39,7 @@ We can observe the logs of the application by running:
 
 You can also interact with the application yourself and see what happens in the logs. 
 
-To stop the logs press ``{{execute interrupt}}
+To stop the logs press ` `{{execute interrupt}}
 
 ### But this kind of logging is awkward!
 
