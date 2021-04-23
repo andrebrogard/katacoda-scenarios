@@ -54,4 +54,3 @@ Take the application and database down.
 ## Next
 
 We will set up DataDog tracing!
-
