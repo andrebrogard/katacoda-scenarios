@@ -5,21 +5,33 @@ First, go to the correct folder in the terminal by clicking below.
 
 `cd /root/code/tutorialApp/`{{execute}}
 
-## Deploy the app and observe the traffic
+## The application
+The application is a nodejs express app, it exposes a to-do rest api at /api/todo and a minimal interface at '/' where you can interact with the application.
+The API supports GET, POST and DELETE of todos. In the background it uses a mongodb instance.
 
-Deploy the application. The compose file will start a nodejs app and a mongodb instance. 
+We deploy both of these using docker and docker-compose. 
+
+While this tutorial does not require knowledge of nodejs/express, mongodb or docker it is beneficial if the reader is familiar with the technologies to understand several steps. 
+
+## Deploy the app
+
+Deploy the application by clicking below. 
+What the command does is that the compose file will start a nodejs app and a mongodb instance. 
 
 `docker-compose up -d`{{execute}}
 
-To see the to-do application UI running, follow this link. The underlying API supports GET, POST and DELETE of todos.
+To see the to-do application UI running, follow this link:
 
 https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com
 
+## Simulate users
 To simulate user activity, we have written a very simple bot that randomly interacts with the API. It will call the API every 500 ms.
 
-Run the bot by clikcing below. 
+Run the bot by clicking below. 
 
 `docker run --network=host -d --env INTERVAL_MS=500 --name todo_bot brogard/simple_datadog_tutorial_user_bot`{{execute}}
+
+## Observe the traffic
 
 We can observe the logs of the application by running:
 
@@ -27,10 +39,7 @@ We can observe the logs of the application by running:
 
 You can also interact with the application yourself and see what happens in the logs. 
 
-To stop the logs:
-
-`Interrupt`{{execute interrupt}}
-
+To stop the logs press ``{{execute interrupt}}
 
 ### But this kind of logging is awkward!
 

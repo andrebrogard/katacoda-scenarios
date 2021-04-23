@@ -6,20 +6,18 @@ In **1. Your Account:**
 fill in your information
 
 In **2. Your stack:**
-you do not need to fill in anything (click no for "Are you a Managed Service Provider / Hosting Provider)
+you do not need to fill in anything (click no for "Are you a Managed Service Provider / Hosting Provider ?")
 
 In **3. Agent Setup:**
-copy your API key by clicking on Windows -> find your API key as shown in the same place as the image below: (it should be a long sequence of random numbers and letters)
+copy your API key by clicking on Windows -> find your API key in the same place as red rectangle in the image shown below: (it should be a long sequence of random numbers and letters)
 
 <img src="https://github.com/andrebrogard/katacoda-scenarios/blob/main/datadog-tutorial/api_key.png?raw=true" alt="API_Key" width="350px" />
 
 ## Configure 
 
-Now we will add a DataDog agent to our docker compose network. The DataDog agent will forward our logs from our application to the DataDog website.
+Now you will add a DataDog agent to the docker compose network. The DataDog agent will forward the logs from the application to the DataDog website.
 
-We start by editing our `docker-compose.yaml` file. Open the `docker-compose.yaml`{{open}} file. 
-
-We will add the DataDog agent container to our compose file. Please also insert your **API key** here in the editor to the right after you have copied the below code snippet.
+Start by editing the `docker-compose.yaml`{{open}} file. Open it, and add the DataDog agent container to the compose file:
 
 <pre class="file" data-filename="docker-compose.yaml" data-target="insert" data-marker="#TODO-add-DD-service">
 datadog-agent:
@@ -34,17 +32,26 @@ datadog-agent:
       - /sys/fs/cgroup:/host/sys/fs/cgroup:ro
 </pre>
 
+The file should now contain the code snippet above.
+
+Now, insert your **API key** in the file instead of "your-api-key".
+
 **Note:** The information besides "DD_SITE" depends on which region you created your account in. If you created your account in the US region. Please change 'datadoghq.eu' to 'datadoghq.com'
 
 ## Application Environment
-Next you will prepare your application environment to also include the following environvariables. This is so that it can find the DataDog agent in the network.
-
-// eva : ska det stå environvariables här? 
+Next you need your application environment to also include the following environment variables. This is so that it can find the DataDog agent in the network.
 
 We need to provide the application with the host name and port of the DataDog agent. Here we also enable profiling. 
 These settings have already been filled in as you can see in the `docker-compose.yaml` file.
 
-## Next
+<pre class="file" data-filename="docker-compose.yaml" data-target="insert" data-marker="#TODO-add-DD-service">
+DD_AGENT_HOST: datadog-agent 
+        DD_TRACE_AGENT_PORT: 8126 
+        DD_PROFILING_ENABLED: "true" 
+        DD_LOGS_INJECTION: "true"
+</pre>
+
+
 
 ## Next
 In the next step, you will build and run your compose file, and your DataDog agent will also run and will be accessible to the application. 

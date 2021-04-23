@@ -24,10 +24,7 @@ services:
         MONGO_HOSTNAME: mongo
         ME_CONFIG_MONGODB_ADMINUSERNAME: root
         ME_CONFIG_MONGODB_ADMINPASSWORD: example
-        DD_AGENT_HOST: datadog-agent 
-        DD_TRACE_AGENT_PORT: 8126 
-        DD_PROFILING_ENABLED: "true" 
-        DD_LOGS_INJECTION: "true" 
+        #TODO-add-DD-service
         
   #TODO-add-DD-service
   
