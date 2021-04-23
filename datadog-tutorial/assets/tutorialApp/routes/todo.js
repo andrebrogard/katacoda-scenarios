@@ -1,4 +1,3 @@
-const tracer = require('dd-trace').init()
 var express = require('express')
 
 const { v4: uuidv4 } = require('uuid');
