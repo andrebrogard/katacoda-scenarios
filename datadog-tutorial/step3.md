@@ -2,13 +2,13 @@
 
 Start by creating a free trial account at datadoghq.com. 
 
-In **step 1. Your Account:**
+In **1. Your Account:**
 fill in your information
 
-In **step 2. Your stack:**
+In **2. Your stack:**
 you do not need to fill in anything (click no for "Are you a Managed Service Provider / Hosting Provider)
 
-In **step 3. Agent Setup:**
+In **3. Agent Setup:**
 copy your API key by clicking on Windows -> find your API key as shown in the same place as the image below: (it should be a long sequence of random numbers and letters)
 
 <img src="https://github.com/andrebrogard/katacoda-scenarios/blob/main/datadog-tutorial/api_key.png?raw=true" alt="API_Key" width="350px" />
@@ -36,13 +36,10 @@ datadog-agent:
 
 **Note:** The information besides "DD_SITE" depends on which region you created your account in. If you created your account in the US region. Please change 'datadoghq.eu' to 'datadoghq.com'
 
-<<<<<<< HEAD
 ## Application Environment
-=======
 Next you will prepare your application environment to also include the following environvariables. This is so that it can find the DataDog agent in the network.
 
 // eva : ska det stå environvariables här? 
->>>>>>> 9f8e68b1e133329e00450728bf375b635b24ce9f
 
 We need to provide the application with the host name and port of the DataDog agent. Here we also enable profiling. 
 These settings have already been filled in as you can see in the `docker-compose.yaml` file.
@@ -52,10 +49,4 @@ These settings have already been filled in as you can see in the `docker-compose
 ## Next
 In the next step, you will build and run your compose file, and your DataDog agent will also run and will be accessible to the application. 
 
-<<<<<<< HEAD
 Before we run our stack, we will make our nodejs application send data to the agent.
-=======
-Before we run this, we will integrate our 
-
-// eva : meningen tog slut mitt i här haha 
->>>>>>> 9f8e68b1e133329e00450728bf375b635b24ce9f
