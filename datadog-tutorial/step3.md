@@ -37,15 +37,13 @@ datadog-agent:
 
 Note: If you created your account in the US region. Please change 'datadoghq.eu' to 'datadoghq.com'
 
-Next we will prepare our application environment to also include the following environvariables. This is so that it can find the DataDog agent in the network.
+## Application Environment
 
-<pre class="file" data-filename="docker-compose.yaml" data-target="insert" data-marker="#TODO-add-DD-env">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DD_AGENT_HOST: datadog-agent 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DD_TRACE_AGENT_PORT: 8126 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DD_PROFILING_ENABLED: "true" 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DD_LOGS_INJECTION: "true" 
-</pre>
+We need to provide the application with the host name and port of the DataDog agent. Here we also enable profiling. 
+These settings have already been filled in as you can see in the `docker-compose.yaml` file.
+
+## Next
 
 The next time we build and run our compose file, our DataDog agent will also run and will be accessible to the application. 
 
-Before we run this, we will integrate our 
+Before we run our stack, we will make our nodejs application send data to the agent.
