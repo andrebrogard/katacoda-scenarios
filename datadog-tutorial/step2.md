@@ -25,11 +25,13 @@ https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com
 ## Simulate users
 To simulate user activity, we have written a very simple bot that randomly interacts with the API. It will call the API every 500 ms.
 
-Run the bot by clicking below. 
+Run the bot by clicking below:
 
 `docker run --network=host -d --env INTERVAL_MS=500 --name todo_bot brogard/simple_datadog_tutorial_user_bot`{{execute}}
 
-## Observe the traffic
+and observe its activity by refreshing the website. 
+
+## Observe the logs
 
 We can observe the logs of the application by running:
 
