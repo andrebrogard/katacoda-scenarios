@@ -1,9 +1,9 @@
-Now we are ready to make changes to our application
+Now you are ready to make changes to our application
 // eva: har inte vi redan make changes i application iom att man ändrade yaml file ? 
 
 ## Application changes
 
-First of all, we need to make the `dd-trace` npm package available for our application. We could add the package directly to package.json, but it is easier to run directly from the command line. 
+First of all, you need to make the `dd-trace` npm package available for our application. You could add the package directly to package.json, but it is easier to run directly from the command line. 
 
 `npm install dd-trace`{{execute}}
 
@@ -11,7 +11,7 @@ Next:
 
 Open the `index.js`{{open}} file.
 
-You need to initialize the tracer. We do this at the top of the entryfile because it can then automatically attach to and trace the express and mongodb package.
+You need to initialize the tracer. Add the followig code snippet at the top of the entryfile, because it can then automatically attach to and trace the express and mongodb package.
 
 // eva: förklara vad tracer är typ? 
 
@@ -19,7 +19,7 @@ You need to initialize the tracer. We do this at the top of the entryfile becaus
 const tracer = require('dd-trace').init()
 </pre>
 
-Now you have actually your integration. It is time to run the stack. 
+Now you have your integration. It is time to run the stack. 
 
 ## It is time to run!
 Start by rebuilding your compose file, because the application has been altered by adding the datadog agent since the last time it was built.

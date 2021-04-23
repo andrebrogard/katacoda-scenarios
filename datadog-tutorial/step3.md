@@ -1,7 +1,6 @@
 ## Set Up DataDog 
 
-Start by creating an free trial account at datadoghq.com. This tutorial is based on accounts in the EU region,
-but you choose any region, we will tell you where the configuration will differ!
+Start by creating a free trial account at datadoghq.com. 
 
 In **step 1. Your Account:**
 fill in your information
@@ -35,9 +34,9 @@ datadog-agent:
       - /sys/fs/cgroup:/host/sys/fs/cgroup:ro
 </pre>
 
-**Note:** If you created your account in the US region. Please change 'datadoghq.eu' to 'datadoghq.com'
+**Note:** The information besides "DD_SITE" depends on which region you created your account in. If you created your account in the US region. Please change 'datadoghq.eu' to 'datadoghq.com'
 
-Next we will prepare our application environment to also include the following environvariables. This is so that it can find the DataDog agent in the network.
+Next you will prepare your application environment to also include the following environvariables. This is so that it can find the DataDog agent in the network.
 
 // eva : ska det stå environvariables här? 
 

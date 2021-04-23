@@ -19,4 +19,4 @@ In addition to this, DataDog automates the monitoring and logging processes, and
 <img src="https://github.com/andrebrogard/katacoda-scenarios/blob/main/datadog-tutorial/example.jpeg?raw=true" alt="Example" width="350px" />
 
 
-Example of how DataDog can look when monitoring an application
+Example of how DataDog can look when monitoring an application.
