@@ -42,15 +42,13 @@ Now, insert your **API key** in the file instead of "your-api-key".
 Next you need your application environment to also include the following environment variables. This is so that it can find the DataDog agent in the network.
 
 We need to provide the application with the host name and port of the DataDog agent. Here we also enable profiling. 
-These settings have already been filled in as you can see in the `docker-compose.yaml` file.
 
-<pre class="file" data-filename="docker-compose.yaml" data-target="insert" data-marker="#TODO-add-DD-service">
+<pre class="file" data-filename="docker-compose.yaml" data-target="insert" data-marker="#TODO-add-DD-environment">
 DD_AGENT_HOST: datadog-agent 
         DD_TRACE_AGENT_PORT: 8126 
         DD_PROFILING_ENABLED: "true" 
         DD_LOGS_INJECTION: "true"
 </pre>
-
 
 
 ## Next
