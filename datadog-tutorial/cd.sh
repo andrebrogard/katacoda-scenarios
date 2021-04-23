@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-cd /root/code/tutorialApp/
+mkdir -p code && cd code && mkdir -p tutorialApp && cd tutorialApp/

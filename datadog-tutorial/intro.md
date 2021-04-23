@@ -10,8 +10,8 @@ The tutorial is based on a simple "to-do" app that is already created, where you
 
 **Step 3:** Set up your DataDog account
 
-**Step 4:** Integrate DataDog with the app and run it
+**Step 4:** Integrate DataDog with the app
 
-**Step 5:** // ta bort ?? 
+**Step 5:** Run the application and observe in DataDog
 
 <img src="https://github.com/andrebrogard/katacoda-scenarios/blob/main/datadog-tutorial/logo.png?raw=true" alt="Logo" width="350px" />

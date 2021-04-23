@@ -13,11 +13,9 @@ First of all, you need to make the `dd-trace` npm package available for the appl
 
 `npm install dd-trace`{{execute}}
 
-Next:
+Next open the `index.js`{{open}} file.
 
-Open the `index.js`{{open}} file.
-
-You need to initialize the tracer. Add the followig code snippet at the top of the entryfile, because it can then automatically attach to and trace the express and mongodb package.
+You need to initialize the tracer. Add the following code snippet at the top of the entryfile, because it can then automatically attach to and trace the express and mongodb package.
 
 <pre class="file" data-filename="index.js" data-target="insert" data-marker="// TODO: Insert trace">
 const tracer = require('dd-trace').init()

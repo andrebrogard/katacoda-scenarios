@@ -14,7 +14,7 @@ An application is nothing without its users. Lets add a very energetic one. This
 
 `docker run --network=host -d --env INTERVAL_MS=100 --name todo_bot brogard/simple_datadog_tutorial_user_bot`{{execute}}
 
-**Note:** If you cannot start this bot, it is because you forgot to delete the one before. Run the commands that you find in **Clean up** step below.
+**Note:** If you cannot start this bot, it is because you forgot to delete the one from step 2. Run the commands that you find in **Clean up** below.
 
 ## Let's Watch!
 

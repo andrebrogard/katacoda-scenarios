@@ -1,24 +1,22 @@
 
 In this step, you will run the application without DataDog.  
 
-First, go to the correct folder in the terminal by clicking below.
-
-`cd /root/code/tutorialApp/`{{execute}}
-
 ## The application
-The application is a nodejs express app, it exposes a to-do rest api at /api/todo and a minimal interface at '/' where you can interact with the application.
-The API supports GET, POST and DELETE of todos. In the background it uses a mongodb instance.
+The application is a Node.js express app. 
+It exposes a rest API for to-dos at '/api/todo' and a minimal web interface where you can interact with the application. The API supports GET, POST and DELETE of to-dos. In the background it uses a mongoDB database.
 
-We deploy both of these using docker and docker-compose. The application is built locally, which means the entire application code is in the editor to your right. Feel free to check it out. 
+We deploy the app and the database using docker and docker-compose. The application is built locally, which means the entire application code is in the editor to your right. Feel free to check it out. 
 
-While this tutorial does not require knowledge of nodejs/express, mongodb or docker it is beneficial if the reader is familiar with the technologies to understand several steps. 
+While this tutorial does not require knowledge of Node.js, express, mongoDB or docker, it is beneficial if the reader is familiar with the technologies to understand some steps better. 
 
 ## Deploy the app
 
 Deploy the application by clicking below. 
-What the command does is that the compose file will start a nodejs app and a mongodb instance. 
+What the command does is that the compose file will start a Node.js app and a mongoDB instance. 
 
 `docker-compose up -d`{{execute}}
+
+**Note:** This command can take some time, so don't worry if nothing comes up at first. You can follow the next instructions when the process is finished.  
 
 To see the to-do application UI running, follow this link:
 
