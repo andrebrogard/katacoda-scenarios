@@ -1,13 +1,13 @@
+## Implement DataDog in the application
+
 Now you are ready to implement DataDog in the application. 
 
-## Implement DataDog in the application \
-
-#### What is a tracer? 
+### What is a tracer? 
 
 To implement DataDog in the application, you will add a tracer to the Node.js application. You will use DataDog's JavaScript tracer. It integrates easily with popular packages such as express and mongoDB (the packages that the application uses).
 The tracer will generate rich logs from the express and mongoDB package and send these to the DataDog Agent that we created and made available in the previous step. The DataDog Agent will forward thes logs to the DataDog site, it will become available to you through their platform.
 
-#### Tracer installation
+### Tracer installation
 
 First of all, you need to make the `dd-trace` npm package available for the application. It is DataDog's ready-made JavaScript package. You could add the package by writing or copying it directly to package.json, but it is easier to run:
 
