@@ -1,4 +1,4 @@
-## Set Up DataDog 
+## Set up DataDog 
 
 Start by creating a free trial account at datadoghq.com. 
 
@@ -9,7 +9,7 @@ In **2. Your stack:**
 you do not need to fill in anything (click no for "Are you a Managed Service Provider / Hosting Provider ?")
 
 In **3. Agent Setup:**
-copy your API key by clicking on Windows -> find your API key in the same place as red rectangle in the image shown below: (it should be a long sequence of random numbers and letters)
+copy your API key by clicking on Windows -> find your API key in the same place as the red rectangle in the image shown below: (it should be a long sequence of random numbers and letters)
 
 <img src="https://github.com/andrebrogard/katacoda-scenarios/blob/main/datadog-tutorial/api_key.png?raw=true" alt="API_Key" width="350px" />
 
@@ -36,10 +36,10 @@ The file should now contain the code snippet above.
 
 Now, insert your **API key** in the file instead of 'your-api-key'.
 
-**Note:** The information besides 'DD_SITE' depends on which region you created your account in. If you created your account in the US region, change 'datadoghq.eu' to 'datadoghq.com'
+**Note:** The information in the 'DD_SITE' variable depends on which region you created your account in. If you created your account in the US region, change 'datadoghq.eu' to 'datadoghq.com'
 
-## Application Environment
-Next you need your application environment to include the following environment variables. This is so that it can find the DataDog agent in the network. You need to provide the application with the host name and port of the DataDog agent, and enable profiling. 
+## Application environment
+Next you need your application environment to include the following environment variables. This is so that it can find the DataDog agent in the network. You need to provide the application with the host name and port of the DataDog agent (default is 8126), and enable profiling. 
 
 <pre class="file" data-filename="docker-compose.yaml" data-target="insert" data-marker="#TODO-add-DD-environment">
 DD_AGENT_HOST: datadog-agent 
@@ -49,6 +49,4 @@ DD_AGENT_HOST: datadog-agent
 </pre>
 
 ## Next
-In the next step, you will build and run your compose file, and your DataDog agent will also run and will be accessible to the application. 
-
-Before you run the stack, you will make sure that the nodejs application sends data to the agent.
+Before you run the stack, you will make sure that the Node.js application sends data to the agent through the tracer library.

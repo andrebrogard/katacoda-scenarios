@@ -16,7 +16,7 @@ An application is nothing without its users. Lets add a very energetic one. This
 
 **Note:** If you cannot start this bot, it is because you forgot to delete the one from step 2. Run the commands that you find in **Clean up** below.
 
-## Let's Watch!
+## Let's watch!
 
 Now for what you have waited for, what can you see in DataDog?
 
