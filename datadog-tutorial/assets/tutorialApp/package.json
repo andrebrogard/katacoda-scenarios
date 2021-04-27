@@ -1,7 +1,11 @@
 {
   "name": "app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A sample to-do app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrebrogard/katacoda-scenarios.git"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node index.js"

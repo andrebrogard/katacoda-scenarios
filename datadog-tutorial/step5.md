@@ -23,7 +23,7 @@ Now for what you have waited for, what can you see in DataDog?
 Make sure you are still logged in and that you have left the Agent setup (you can press the logo in the upper left corner).
 
 Once in the DataDog platform (app.datadog.eu)
-1. Go to APM
+1. Go to APM <img src="https://github.com/andrebrogard/katacoda-scenarios/blob/main/datadog-tutorial/APM.png?raw=true" alt="APM Icon" width="40px" />
 2. Go to Services
 3. Go to app
 
@@ -48,3 +48,6 @@ Stop and remove the bot.
 Take the application, database and DataDog Agent down.
 
 `docker-compose down`{{execute}}
+
+## Next
+Now it is your turn to integrate DataDog in your own application :D
