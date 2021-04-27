@@ -5,7 +5,7 @@ To integrate DataDog with the application, you will add a tracer to it. A tracer
 
 ### How does a tracer work? 
 
-The tracer will generate rich logs from the express and mongoDB package. It will then send those to the DataDog Agent that we created and made available in the previous step. The DataDog Agent will process and forward these logs to the DataDog website, and they will become available to you through their platform.
+The tracer will generate rich logs from the express and mongoDB package. It will then send those to the DataDog agent that we created and made available in the previous step. The DataDog agent will process and forward these logs to the DataDog website, and they will become available to you through their platform.
 
 ### Tracer installation
 
@@ -17,7 +17,7 @@ You could add the package by writing or copying it directly to package.json, but
 
 Next open the `index.js`{{open}} file.
 
-You need to initialize the tracer. Add the following code snippet at the top of the entryfile, because it can then automatically attach to and trace the express and mongoDB package.
+You need to initialize the tracer. Add the following code snippet at the top of the entry file (`index.js`), because it can then automatically attach to and trace the express and mongoDB packages.
 
 <pre class="file" data-filename="index.js" data-target="insert" data-marker="// TODO: Insert trace">
 const tracer = require('dd-trace').init()

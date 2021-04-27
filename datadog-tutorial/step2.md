@@ -2,8 +2,8 @@
 In this step, you will run the application without DataDog.  
 
 ## The application
-The application is a Node.js express app. 
-It exposes a rest API for to-dos at '/api/todo' and a minimal web interface where you can interact with the application. The API supports GET, POST and DELETE of to-dos. In the background it uses a mongoDB database.
+The application is a Node.js express application. 
+It exposes a REST API for to-dos at '/api/todo' and a minimal web interface where you can interact with the application. The API supports GET, POST and DELETE of to-dos. In the background, it uses a mongoDB database.
 
 The application and the database are deployed using docker and docker-compose. The application is built locally, which means the entire application code is in the editor to your right. Feel free to check it out. 
 
@@ -12,22 +12,22 @@ While this tutorial does not require knowledge of Node.js, express, mongoDB or d
 ## Deploy the application
 
 Deploy the application by clicking below. 
-What the command does is that the `docker-compose.yaml` file will start a Node.js application and a mongoDB instance. 
+What the docker-compose command does is to start up our Node.js application and a mongoDB instance from the configuration in the `docker-compose.yaml` file.
 
 `docker-compose up -d`{{execute}}
 
-**Note:** This command can take some time, so don't worry if nothing comes up at first. You can follow the next instructions when the process is finished.  
+**Note:** This command can take some time, so don't worry if nothing comes up at first. You can follow the next instructions and see the UI when the process is finished.  
 
 To see the to-do application UI running, follow this link:
 
 https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com
 
 ## Simulate users
-To simulate user activity, we have written a very simple bot that randomly interacts with the API. It will call the API every 1200 ms.
+To simulate user activity, we have written a very simple bot that randomly interacts with the API. It will call the API every 2 seconds.
 
 Run the bot by clicking below:
 
-`docker run --network=host -d --env INTERVAL_MS=1200 --name todo_bot brogard/simple_datadog_tutorial_user_bot`{{execute}}
+`docker run --network=host -d --env INTERVAL_MS=2000 --name todo_bot brogard/simple_datadog_tutorial_user_bot`{{execute}}
 
 and observe its activity by refreshing the to-do application UI. 
 
@@ -43,7 +43,7 @@ To stop the logs press ` `{{execute interrupt}}
 
 ### But this kind of logging is awkward!
 
-Here, you saw logs from print statements in the application which are called at the same time as the functions.
+Here, you saw logs from print statements in the application, which are called at the same time as the functions.
 This works as a simple way of seeing what is happening in the application, but is not sufficient in a more complex environment,
 for example in a company which supports many hosts and applications that produces their own logs. By gathering logs 
 from the docker containers output we loose a lot of information, even if we enrich these logs as best we can. 

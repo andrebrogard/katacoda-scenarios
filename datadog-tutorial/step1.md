@@ -1,15 +1,15 @@
 
 ## What is DataDog? 
 
-DataDog is an application which is used to monitor applications, servers, databases and other tools. The software was created in 2010, and thousands of companies use DataDog, including for example Facebook and Spotify. It also integrates with many widely used tools such as GitHub, Docker, Slack and programming languages such as Java and PHP. 
+DataDog is an application which is used to monitor applications, servers, databases and other tools. The software was created in 2010, and thousands of companies use DataDog, including for example Facebook and Spotify. It also integrates with many widely used tools such as GitHub, Docker and Slack, and programming languages such as Java and PHP. 
 
 Learn more: https://www.datadoghq.com/product/
 
-It is available for free to students, when signing up to GitHub Education (https://education.github.com/pack/join). 
+**Note:** It is available for free to students, when signing up to GitHub Education (https://education.github.com/pack/join). 
 
 ## How is DataDog related to DevOps? 
 
-DataDog is a tool that can be related to the "monitor" part of the DevOps process.
+DataDog can be related to the "monitor" part of the DevOps process.
 
 <img src="https://github.com/andrebrogard/katacoda-scenarios/blob/main/datadog-tutorial/devops_process.png?raw=true" alt="Devops_Process" width="350px" />
 
